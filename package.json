@@ -1,0 +1,16 @@
+{
+  "name": "apiqa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^8.2.1",
+    "internet-available": "^1.0.0",
+    "node-rest-client": "^3.1.0"
+  }
+}

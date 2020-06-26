@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="../styles/reset.css">
+        <link rel="stylesheet" href="../styles/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.50.2/codemirror.min.css" integrity="sha256-aUkU60JHknIp4cZ37K3nZ0qln+bxL5FIMzOUCjLJzfg=" crossorigin="anonymous" />
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="sidebar">
+`            <!--
+            Стандартизировать все по шрифтам
+            Добавить темную тему
+            Сделать коллекции и избранное
+            Добавлять туда удалять и избранное 
+-->
+
+            </div>
+           
+            <div class="content">
+                  <div class="input-group">
+                    <div class="input-group-dropdown">
+                        <select id="select">
+                            <option selected value="GET">GET</option>
+                            <option value="POST">POST</option>
+                            <option value="PUT">PUT</option>
+                            <option value="DELETE">DELETE</option>
+                        </select>
+                    </div>
+                    <div class="input-group-area"><input type="text" id="inputRequest" placeholder="Запрос"></div>
+                    <div class="input-group-icon" id="send">Отправить</div>
+                  </div>
+
+                  <div class="tab">
+                    <button class="tablinks" id="parametrsButton">Параметры</button>
+                    <button class="tablinks" id="headersButton">Заголовки</button>
+                    <button class="tablinks" id="dataButton">Данные</button>
+                  </div>
+
+                    <div id="Parametrs" class="tabcontent">
+                      <h3>Параметры</h3>
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Ключ</th>
+                            <th colspan="2">Значение</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><input type="text" class="tableInput parKey"></td>
+                            <td style="border-right: none;"><input type="text" class="tableInput parVal"></td>
+                            <td align="right" style="border-left: none;"><img src="../img/delete.png"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div id="Headers" class="tabcontent">
+                      <h3>Заголовки</h3>
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Ключ</th>
+                            <th colspan="2">Значение</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><input type="text" class="tableInput headKey" list="headKey"></td>
+                            <td style="border-right: none;"><input type="text" class="tableInput headVal"></td>
+                            <td align="right" style="border-left: none;"><img src="../img/delete.png"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div id="Data" class="tabcontent">
+                      <h3>Данные</h3>
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Ключ</th>
+                            <th colspan="2">Значение</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><input type="text" class="tableInput dataKey"></td>
+                            <td style="border-right: none;"><input type="text" class="tableInput dataVal"></td>
+                            <td align="right" style="border-left: none;"><img src="../img/delete.png"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+
+                    <datalist id='headKey'>
+                      <option>Accept</option>
+                      <option>Accept-Charset</option>
+                      <option>Accept-Encoding</option>
+                      <option>Accept-Language</option>
+                      <option>Authorization</option>
+                      <option>Cache-Control</option>
+                      <option>Connection</option>
+                      <option>Content-Disposition</option>
+                      <option>Date</option>
+                      <option>Expect</option>
+                      <option>From</option>
+                      <option>Host</option>
+                      <option>If-Match</option>
+                      <option>If-Modified-Since</option>
+                      <option>If-None-Match</option>
+                      <option>If-Range</option>
+                      <option>If-Unmodified-Since</option>
+                      <option>Max-Forwards</option>
+                      <option>MIME-Version</option>
+                      <option>Pragma</option>
+                      <option>Proxy-Authorization</option>
+                      <option>Range</option>
+                      <option>Referer</option>
+                      <option>TE</option>
+                      <option>Trailer</option>
+                      <option>Transfer-Encoding</option>
+                      <option>Upgrade</option>
+                      <option>User-Agent</option>
+                      <option>Via</option>
+                      <option>Warning</option>
+                    </datalist>
+
+                    <div class="save"><span id="savebtn">Сохранить результат запроса в файл</span></div>
+
+                    <div class="result" id="result">
+                      
+                    </div>
+
+            </div>
+
+        </div>
+
+        <script>
+            require('../controllers/IndexController.js')
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.50.2/codemirror.min.js" integrity="sha256-rdi8oE6Z5spj3j8D8tG0qx8bNXgnKjw3zU2PrGBy3AE=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.50.2/mode/javascript/javascript.min.js" integrity="sha256-VNJ6ASCktgY+YWSwWrZVdMKbqyAIY7fys5Yckd8Ij7E=" crossorigin="anonymous"></script>
+    </body>
+</html>
